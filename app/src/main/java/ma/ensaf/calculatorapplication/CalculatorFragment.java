@@ -1,61 +1,87 @@
 package ma.ensaf.calculatorapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    TextView inputText, outputText;
-
+public class CalculatorFragment extends Fragment implements View.OnClickListener {
+    private TextView inputText, outputText;
     private String input, output, newOutput;
 
     private Button button0, button1, button2, button3, button4, button5, button6, button7,
             button8, button9, buttonAdd, buttonMultiply, buttonSubs, buttonDivision, buttonPoint, buttonPercent,
             buttonPower, buttonEqual, buttonClear;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_calculator, container, false);
 
-        inputText = findViewById(R.id.input_text);
-        outputText = findViewById(R.id.output_text);
+        inputText = view.findViewById(R.id.input_text);
+        outputText = view.findViewById(R.id.output_text);
 
-        button0 = findViewById(R.id.btn0);
-        button1 = findViewById(R.id.btn1);
-        button2 = findViewById(R.id.btn2);
-        button3 = findViewById(R.id.btn3);
-        button4 = findViewById(R.id.btn4);
-        button5 = findViewById(R.id.btn5);
-        button6 = findViewById(R.id.btn6);
-        button7 = findViewById(R.id.btn7);
-        button8 = findViewById(R.id.btn8);
-        button9 = findViewById(R.id.btn9);
-        buttonAdd = findViewById(R.id.addition);
-        buttonMultiply = findViewById(R.id.multiplication);
-        buttonDivision = findViewById(R.id.division);
-        buttonSubs = findViewById(R.id.substract);
-        buttonPoint = findViewById(R.id.point);
-        buttonPower = findViewById(R.id.power);
-        buttonEqual = findViewById(R.id.equals);
-        buttonPercent = findViewById(R.id.pourcentage);
-        buttonClear = findViewById(R.id.clear);
+        button0 = view.findViewById(R.id.btn0);
+        button1 = view.findViewById(R.id.btn1);
+        button2 = view.findViewById(R.id.btn2);
+        button3 = view.findViewById(R.id.btn3);
+        button4 = view.findViewById(R.id.btn4);
+        button5 = view.findViewById(R.id.btn5);
+        button6 = view.findViewById(R.id.btn6);
+        button7 = view.findViewById(R.id.btn7);
+        button8 = view.findViewById(R.id.btn8);
+        button9 = view.findViewById(R.id.btn9);
+        buttonAdd = view.findViewById(R.id.addition);
+        buttonMultiply = view.findViewById(R.id.multiplication);
+        buttonDivision = view.findViewById(R.id.division);
+        buttonSubs = view.findViewById(R.id.substract);
+        buttonPoint = view.findViewById(R.id.point);
+        buttonPower = view.findViewById(R.id.power);
+        buttonEqual = view.findViewById(R.id.equals);
+        buttonPercent = view.findViewById(R.id.pourcentage);
+        buttonClear = view.findViewById(R.id.clear);
 
+        setButtonClickListeners();
+
+        return view;
     }
 
-    public void onButtonClicked(View view) {
+    private void setButtonClickListeners() {
+        button0.setOnClickListener(this);
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
+        button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
+        button9.setOnClickListener(this);
+        buttonAdd.setOnClickListener(this);
+        buttonMultiply.setOnClickListener(this);
+        buttonDivision.setOnClickListener(this);
+        buttonSubs.setOnClickListener(this);
+        buttonPoint.setOnClickListener(this);
+        buttonPower.setOnClickListener(this);
+        buttonEqual.setOnClickListener(this);
+        buttonPercent.setOnClickListener(this);
+        buttonClear.setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View view) {
         Button button = (Button) view;
         String data = button.getText().toString();
+
         switch (data) {
             case "C":
                 input = null;
-                output=null;
-                newOutput=null;
+                output = null;
+                newOutput = null;
                 outputText.setText("");
                 break;
 
@@ -170,4 +196,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return number;
     }
+
 }

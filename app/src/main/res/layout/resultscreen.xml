@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorDarkV2"
+    android:background="@color/Darkbrown"
     >
     <TextView
         android:id="@+id/input_text"

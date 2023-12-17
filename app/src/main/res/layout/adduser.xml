@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/LightBrown"
+    >
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/person"
+        android:id="@+id/usernameinputlayout"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:background="@color/white"
+            android:hint="Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/usernameinputlayout"
+        app:startIconDrawable="@drawable/mail"
+        android:id="@+id/emailinputlayout"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:background="@color/white"
+            android:hint="Email"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/emailinputlayout"
+        app:startIconDrawable="@drawable/password"
+        android:id="@+id/passwordinputLayout"
+        app:endIconMode="password_toggle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@color/white"
+            android:hint="password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Adduser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordinputLayout"
+        android:layout_alignStart="@+id/passwordinputLayout"
+        android:layout_alignEnd="@+id/passwordinputLayout"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="71dp"
+
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/black"
+        android:padding="15dp"
+        android:text="Add user"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>

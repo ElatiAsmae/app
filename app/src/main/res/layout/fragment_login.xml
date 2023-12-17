@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/LightBrown"
+    tools:context=".LoginFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/person"
+        android:id="@+id/usernameinputlayout"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="357dp"
+            android:layout_height="68dp"
+            android:background="@color/white"
+            android:hint="Name"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordinputLayout"
+        android:layout_alignStart="@+id/passwordinputLayout"
+        android:layout_alignEnd="@+id/passwordinputLayout"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="@color/black"
+        android:padding="15dp"
+        android:text="Login"
+        android:textSize="20dp" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/usernameinputlayout"
+        app:startIconDrawable="@drawable/password"
+        android:id="@+id/passwordinputLayout"
+        app:endIconMode="password_toggle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:background="@color/white"
+            android:hint="password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Adduser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#B45F06"
+        android:contentDescription="Add User"
+        app:borderWidth="50dp"
+        app:maxImageSize="50dp"
+        app:srcCompat="@drawable/add" />
+
+    <LinearLayout
+        android:id="@+id/signInWithGoogleLayout"
+        android:layout_width="373dp"
+        android:layout_height="67dp"
+        android:layout_below="@+id/Login"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/googleLogo"
+            android:layout_width="65dp"
+            android:layout_height="52dp"
+            android:contentDescription="Google Logo"
+            android:src="@drawable/google" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signInWithGoogle"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Sign in with Google"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

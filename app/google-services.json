@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "853463468181",
+    "project_id": "calculator-application-82078",
+    "storage_bucket": "calculator-application-82078.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853463468181:android:75e1af7b6766fe113a739c",
+        "android_client_info": {
+          "package_name": "ma.ensaf.calculatorapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUsIe7G7nQ_IwNVS4vhbc7PrLIMLd-LXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
